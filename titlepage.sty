@@ -1,0 +1,66 @@
+\RequirePackage{graphicx}
+\newcommand{\drawer}{\vspace*{-10pt}}
+
+\newcommand{\dhrule}[3] { % 1, 2 - lines height
+	{
+		\parindent=0pt
+		\rule{\textwidth}{#1}
+		
+		\vspace{\dimexpr-\baselineskip+1mm+#3-1pt}
+		
+		\rule{\textwidth}{#2}
+	}
+}
+
+\newcommand{\schoolfrom}[2] {
+	
+	\begin{center}
+		\textbf{#1}	%School name
+		
+		\textbf{#2}	%Department name
+	\end{center}
+}
+
+\newcommand{\doctitlepage}[3]{
+	{
+		\thispagestyle{empty}
+		\centering
+
+		\vspace*{-100pt}
+
+		\includegraphics[width=22pt]{additional/fefulogo.pdf}
+
+		{
+			\footnotesize МИНИСТЕРСТВО~НАУКИ~И~ВЫСШЕГО~ОБРАЗОВАНИЯ~РОССИЙСКОЙ~ФЕДЕРАЦИИ
+			
+			\vspace*{-6pt}
+
+			Федеральное государственное автономное образовательное учреждение высшего образования
+		}
+
+		\drawer
+		% \vspace*{-10pt} %Comment this for XeLaTeX build
+		\textbf{<<Дальневосточный федеральный университет>>}
+		
+		\textbf{(ДВФУ)}
+
+		\vspace*{-6pt}
+		\dhrule{3pt}{1pt}{0pt}
+
+		\vspace*{-20pt}
+
+		#1
+
+		#2
+
+		\vfill
+
+		\begin{center}
+			\textbf{г. Владивосток \linebreak #3}
+		\end{center}
+
+		\vspace*{-50pt}
+	
+	}
+	\pagebreak
+}

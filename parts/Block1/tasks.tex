@@ -1,0 +1,27 @@
+\subsection{Задачи}
+
+	Здесь расписываются задачи в следующем формате
+
+	%Нумерация задач обязательна
+	%У нумерации стоит счетчик "tasks", который нужно каждый раз инициализировать
+	\begin{enumerate}
+		\setcounter{enumi}{\value{tasks}}
+
+		\item Сама задача №1		%В комментарии ответ к задаче 1
+		\item Сама задача №2		%В комментарии ответ к задаче 2
+
+		\setcounter{tasks}{\value{enumi}}
+	\end{enumerate}
+
+	В случае, если нужно несколько колонок, выглядит это так
+
+	\begin{multicols}{2}
+		\begin{enumerate}
+			\setcounter{enumi}{\value{tasks}}
+
+			\item Сама задача №3	%В комментарии ответ к задаче 3
+			\item Сама задача №4	%В комментарии ответ к задаче 4
+
+			\setcounter{tasks}{\value{enumi}}
+		\end{enumerate}
+	\end{multicols}

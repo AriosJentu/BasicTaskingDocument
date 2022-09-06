@@ -1,0 +1,75 @@
+\RequirePackage{xltxtra}
+\RequirePackage{polyglossia}
+\RequirePackage{xecyr}
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{graphicx}
+\RequirePackage{mathrsfs}
+\RequirePackage{multicol}
+\RequirePackage{float}
+
+\RequirePackage{fancyhdr}
+
+\RequirePackage{titlesec}
+\RequirePackage{titletoc}
+\RequirePackage[linktoc=all, hidelinks]{hyperref}
+
+\RequirePackage[font=small,labelfont=bf]{caption}
+
+\RequirePackage{cite}
+
+\newcounter{tasks}
+\setcounter{tasks}{0}
+
+% Page numbering
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyheadoffset{10mm}
+\fancyfootoffset{0mm}
+\setlength{\headheight}{21pt}
+
+% Make new part command
+\newcommand{\newpart}[1]{
+	\pagebreak
+
+	{
+		\thispagestyle{empty}
+		\vspace*{50pt}
+		\part{#1}
+	}
+
+	\pagebreak
+}
+
+% Config main language
+\setmainlanguage{russian}
+\setdefaultlanguage{russian}
+\SetLanguageKeys{russian}{indentfirst=true}
+
+% Configure font
+% \setmainfont{Georgia}
+\setmainfont{Times New Roman}
+\setsansfont{Courier New}
+\setmonofont{Droid Sans Mono}
+% \setsansfont{Droid Sans}
+% \newfontfamily\cyrillicfont{Georgia}
+
+% Sections font
+\titleformat*{\section}{\normalfont \large \bfseries}
+\titleformat*{\subsection}{\normalfont \bfseries \centering}
+
+% Table of contents
+\dottedcontents{section}[1.7em]{\vspace{2pt} \bfseries}{1.7em}{1pc}
+\dottedcontents{subsection}[2.5em]{}{2.5em}{1pc}
+\setcounter{tocdepth}{2}
+
+%Disable section numbering
+% \renewcommand\thesection{}
+% \renewcommand\thesubsection{}
+
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
